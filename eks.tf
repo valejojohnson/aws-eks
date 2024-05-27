@@ -2,7 +2,7 @@ module "eks" {
   source = "terraform-aws-modules/eks/aws"
 
   cluster_name                   = var.eks_name # Set name in the variables.tf file
-  cluster_version                = "1.29" # Latest version as of 03/2024
+  cluster_version                = "latest"
   cluster_endpoint_public_access = true
   iam_role_arn                   = data.aws_iam_role.eks.arn
   vpc_id                         = data.aws_vpc.default.id
