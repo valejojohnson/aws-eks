@@ -11,6 +11,13 @@ This repository contains Terraform configuration for setting up an Amazon EKS cl
 
 ## Usage
 
+### Quick Start
+1. **Clone/Init/Apply**
+   ```sh
+   git clone https://github.com/valejojohnson/aws-eks.git && cd aws-eks && terraform init && terraform apply --auto-approve
+
+### Normal Deployment
+
 1. **Clone the Repository**
 
    ```sh
