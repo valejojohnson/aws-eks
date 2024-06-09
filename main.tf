@@ -2,8 +2,6 @@ provider "aws" {
   region = "us-west-1"
 }
 
-provider "random" {}
-
 provider "kubernetes" {
   host                   = module.eks.cluster_endpoint
   token                  = data.aws_eks_cluster_auth.eks.token

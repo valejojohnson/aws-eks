@@ -76,7 +76,7 @@ This repository contains Terraform configuration for setting up an Amazon EKS cl
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://en.wikipedia.org/wiki/MIT_License) for more details.
 
 ### Explanation:
 - **Prerequisites**: Lists the necessary tools and permissions required to use the configuration.
