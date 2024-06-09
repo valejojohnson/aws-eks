@@ -1,4 +1,4 @@
-# Terraform EKS Cluster Setup (aws-eks)
+# Terraform EKS Cluster (aws-eks)
 
 This repository contains Terraform configuration for setting up an Amazon EKS cluster with managed node groups, cluster addons, and access policies.
 
