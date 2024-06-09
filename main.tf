@@ -1,9 +1,16 @@
 provider "aws" {
-  profile = "default"
-  region  = "us-west-1"
+  region = "us-west-1"
 }
 
-resource "aws_iam_role_policy_attachment" "eks_administrator_access" {
-  policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
-  role       = data.aws_iam_role.eks.name
+provider "random" {}
+
+provider "kubernetes" {
+  host                   = module.eks.cluster_endpoint
+  token                  = data.aws_eks_cluster_auth.eks.token
+  cluster_ca_certificate = base64decode(module.eks.cluster_certificate_authority_data)
+}
+
+resource "random_pet" "this" {
+  length = 2
+  prefix = "eks"
 }
