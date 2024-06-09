@@ -58,9 +58,13 @@ This repository contains Terraform configuration for setting up an Amazon EKS cl
 ## Resources Created
 
 -[x] `EKS Cluster`: An Amazon EKS cluster with public and private endpoint access.
+
 -[x] `Managed Node Groups`: Auto-scaling groups of worker nodes.
+
 -[x] `Cluster Addons`: CoreDNS, VPC CNI, kube-proxy, AWS EBS CSI driver, and Amazon CloudWatch Observability.
+
 -[x] `Access Entry`: Grants access to the EKS cluster for the current AWS user.
+
 -[x] `Access Policy Association`: Associates the Amazon EKS Admin Policy with the EKS cluster.
 
 ## License
