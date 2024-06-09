@@ -32,7 +32,6 @@ This repository contains Terraform configuration for setting up an Amazon EKS cl
    ```sh
    aws eks update-kubeconfig --name <your-cluster-name> --region <your-region>
 
-
 ## Configuration
 
 ### Variables
