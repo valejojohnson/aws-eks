@@ -36,6 +36,10 @@ This repository contains Terraform configuration for setting up an Amazon EKS cl
    ```sh
    aws eks update-kubeconfig --name eks-bunny-rabbit --region us-west-1 
 
+6. **Check access**
+   ```sh
+   kubectl get ns
+
 ## Configuration
 
 ### Variables
