@@ -41,10 +41,6 @@ module "eks" {
     aws-ebs-csi-driver = {
       most_recent = true
     }
-
-    amazon-cloudwatch-observability = {
-      most_recent = true
-    }
   }
 }
 
