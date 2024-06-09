@@ -14,7 +14,7 @@ module "eks" {
   cluster_enabled_log_types = ["api", "audit", "authenticator", "scheduler"]
 
   eks_managed_node_groups = {
-    eks-node-group = {
+    "${random_pet.this.id}-node-group" = {
       desired_size   = 2
       max_size       = 3
       min_size       = 2
