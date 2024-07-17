@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: income-app
-        image: amielterry26/income-tracker
+        image: valejojohnson/c1b-nginx
         ports:
         - containerPort: 80
 ---
