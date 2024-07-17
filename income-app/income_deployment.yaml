@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: income-deployment
+  labels:
+    app: incometracker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: incometracker
+  template:
+    metadata:
+      labels:
+        app: incometracker
+    spec:
+      containers:
+      - name: income-app
+        image: amielterry26/income-tracker
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: income-service
+  labels:
+    app: incometracker
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: incometracker
