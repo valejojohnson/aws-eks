@@ -2,7 +2,7 @@ module "eks" {
   source = "terraform-aws-modules/eks/aws"
 
   cluster_name                    = random_pet.this.id
-  cluster_version                 = "1.30"
+  cluster_version                 = "1.32"
   cluster_endpoint_public_access  = true
   cluster_endpoint_private_access = true
   iam_role_arn                    = data.aws_iam_role.eks.arn
@@ -16,7 +16,7 @@ module "eks" {
   eks_managed_node_groups = {
     "${random_pet.this.id}-node-group" = {
       desired_size   = 2
-      max_size       = 3
+      max_size       = 10
       min_size       = 2
       instance_types = ["m4.large"]
     }
